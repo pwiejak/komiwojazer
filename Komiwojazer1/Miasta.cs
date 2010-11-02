@@ -25,9 +25,9 @@ namespace Komiwojazer1
             {
                 Miasto dodawaneMiasto = new Miasto(0, 0, 0);
                 index++;
-                a = miasto.IndexOf(" ");
-                int.TryParse(miasto.Substring(a + 1, 3), out x);
-                int.TryParse(miasto.Substring(a + 5), out y);
+                string[] str = miasto.Split(new char[] { ' ' });
+                int.TryParse(str[1], out x);
+                int.TryParse(str[2], out y);
                 dodawaneMiasto.WspolrzedneMiasta.X = x;
                 dodawaneMiasto.WspolrzedneMiasta.Y = y;
                 dodawaneMiasto.Index = index;

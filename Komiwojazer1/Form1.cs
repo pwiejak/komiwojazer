@@ -33,9 +33,9 @@ namespace Komiwojazer1
                 Miasto dodawaneMiasto = new Miasto(0, 0, 0);
                 index++;
                 cbMiasta.Items.Add(miasto);
-                a = miasto.IndexOf(" ");
-                int.TryParse(miasto.Substring(a+1, 3), out x);
-                int.TryParse(miasto.Substring(a + 5), out y);
+                string[] str = miasto.Split(new char[] { ' ' } );
+                int.TryParse(str[1], out x);
+                int.TryParse(str[2], out y);
                 dodawaneMiasto.WspolrzedneMiasta.X = x;
                 dodawaneMiasto.WspolrzedneMiasta.Y = y;
                 dodawaneMiasto.Index = index;
@@ -46,6 +46,19 @@ namespace Komiwojazer1
             }
             tr.Close();
             Miasta m = new Miasta();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Miasta M = new Miasta();
+            for (int i = 0; i < M.ListaMiast.Count; i++)
+            {
+                if (i < M.ListaMiast.Count - 1)
+                    rysunek.DrawLine(Pens.Black, M.ListaMiast[i].WspolrzedneMiasta, M.ListaMiast[i + 1].WspolrzedneMiasta);
+                else
+                    rysunek.DrawLine(Pens.Black, M.ListaMiast[i].WspolrzedneMiasta, M.ListaMiast[0].WspolrzedneMiasta);
+                
+            }
         }
 
         

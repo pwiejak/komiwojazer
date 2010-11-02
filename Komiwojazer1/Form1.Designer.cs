@@ -98,6 +98,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textlabel7
             // 
@@ -144,6 +145,12 @@
             // 
             // Mutacje
             // 
+            this.Mutacje.DecimalPlaces = 1;
+            this.Mutacje.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.Mutacje.Location = new System.Drawing.Point(61, 215);
             this.Mutacje.Name = "Mutacje";
             this.Mutacje.Size = new System.Drawing.Size(120, 20);
