@@ -24,12 +24,13 @@ namespace Komiwojazer1
         private void btWczytajMiasta_Click(object sender, EventArgs e)
         {
             List<Miasto> miasta = new List<Miasto>();
-            Miasto dodawaneMiasto = new Miasto(0,0,0);
+            
             TextReader tr = new StreamReader("Miasta.txt");
             string miasto;
             int x, y, a, index = 0;
             while ((miasto = tr.ReadLine()) != null)
             {
+                Miasto dodawaneMiasto = new Miasto(0, 0, 0);
                 index++;
                 cbMiasta.Items.Add(miasto);
                 a = miasto.IndexOf(" ");
@@ -44,14 +45,10 @@ namespace Komiwojazer1
                 
             }
             tr.Close();
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             Miasta m = new Miasta();
-            
         }
+
+        
 
     }
 }

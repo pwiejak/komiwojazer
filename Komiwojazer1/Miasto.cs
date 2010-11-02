@@ -10,6 +10,7 @@ namespace Komiwojazer1
     {
         public Point WspolrzedneMiasta;
         public int Index;
+        
 
         public Miasto(int x, int y, int i)
         {
