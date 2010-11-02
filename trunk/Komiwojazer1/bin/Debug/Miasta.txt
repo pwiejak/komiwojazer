@@ -1,8 +1,12 @@
-Miasto1 25  100
+aagd 90 300
 Miasto2 321 44
 Miasto3 400 100
 Miasto4 100 200
-Miasto5 1   1
+Miasto5 1 1
 Miasto6 200 200
 Miasto7 300 400
 Miasto8 50  400
+aaa 43 470
+ffs 342 432
+aa 32 135
+gg 430 212
