@@ -13,16 +13,17 @@ namespace Komiwojazer1
     class Miasta
     {
         public List<Miasto> ListaMiast = new List<Miasto>();
-
+        
         public Miasta()
         {
             ListaMiast = new List<Miasto>();
-            Miasto dodawaneMiasto = new Miasto(0, 0, 0);
+            
             TextReader tr = new StreamReader("Miasta.txt");
             string miasto;
             int x, y, a, index = 0;
             while ((miasto = tr.ReadLine()) != null)
             {
+                Miasto dodawaneMiasto = new Miasto(0, 0, 0);
                 index++;
                 a = miasto.IndexOf(" ");
                 int.TryParse(miasto.Substring(a + 1, 3), out x);
