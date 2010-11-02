@@ -7,3 +7,12 @@ E:\VS2010\Projects\Komiwojazer1\Komiwojazer1\obj\x86\Debug\GenerateResource.read
 E:\VS2010\Projects\Komiwojazer1\Komiwojazer1\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\VS2010\Projects\Komiwojazer1\Komiwojazer1\obj\x86\Debug\Komiwojazer1.exe
 E:\VS2010\Projects\Komiwojazer1\Komiwojazer1\obj\x86\Debug\Komiwojazer1.pdb
+D:\Informatyka\VII semestr\BMMSI\Komiwojazer1\obj\x86\Debug\Komiwojazer1.exe
+D:\Informatyka\VII semestr\BMMSI\Komiwojazer1\obj\x86\Debug\Komiwojazer1.pdb
+D:\Informatyka\VII semestr\BMMSI\Komiwojazer1\bin\Debug\Komiwojazer1.exe
+D:\Informatyka\VII semestr\BMMSI\Komiwojazer1\bin\Debug\Komiwojazer1.pdb
+D:\Informatyka\VII semestr\BMMSI\Komiwojazer1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Informatyka\VII semestr\BMMSI\Komiwojazer1\obj\x86\Debug\Komiwojazer1.Form1.resources
+D:\Informatyka\VII semestr\BMMSI\Komiwojazer1\obj\x86\Debug\Komiwojazer1.Properties.Resources.resources
+D:\Informatyka\VII semestr\BMMSI\Komiwojazer1\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Informatyka\VII semestr\BMMSI\Komiwojazer1\obj\x86\Debug\GenerateResource.write.1.tlog

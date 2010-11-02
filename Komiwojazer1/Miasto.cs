@@ -8,14 +8,13 @@ namespace Komiwojazer1
 {
     class Miasto
     {
-        public Point wspolrzedneMiasta;        
-        //int wspolrzednaX, wspolrzednaY;
+        public Point WspolrzedneMiasta;
+        public int Index;
 
-        public Miasto(int x, int y)
+        public Miasto(int x, int y, int i)
         {
-            wspolrzedneMiasta = new Point(x, y);
+            WspolrzedneMiasta = new Point(x, y);
+            Index = i;
         }
-
-
     }
 }
