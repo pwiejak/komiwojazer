@@ -16,3 +16,19 @@ D:\Informatyka\VII semestr\BMMSI\Komiwojazer1\obj\x86\Debug\Komiwojazer1.Form1.r
 D:\Informatyka\VII semestr\BMMSI\Komiwojazer1\obj\x86\Debug\Komiwojazer1.Properties.Resources.resources
 D:\Informatyka\VII semestr\BMMSI\Komiwojazer1\obj\x86\Debug\GenerateResource.read.1.tlog
 D:\Informatyka\VII semestr\BMMSI\Komiwojazer1\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\VS2010\Projects\BMMSI\2010.11.02\Komiwojazer1\obj\x86\Debug\Komiwojazer1.exe
+E:\VS2010\Projects\BMMSI\2010.11.02\Komiwojazer1\obj\x86\Debug\Komiwojazer1.pdb
+E:\VS2010\Projects\BMMSI\2010.11.02\Komiwojazer1\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\VS2010\Projects\BMMSI\2010.11.02\Komiwojazer1\obj\x86\Debug\Komiwojazer1.Form1.resources
+E:\VS2010\Projects\BMMSI\2010.11.02\Komiwojazer1\obj\x86\Debug\Komiwojazer1.Properties.Resources.resources
+E:\VS2010\Projects\BMMSI\2010.11.02\Komiwojazer1\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\VS2010\Projects\BMMSI\2010.11.02\Komiwojazer1\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\VS2010\Projects\BMMSI\2010.11.02\Komiwojazer1\bin\Debug\Komiwojazer1.exe
+E:\VS2010\Projects\BMMSI\2010.11.02\Komiwojazer1\bin\Debug\Komiwojazer1.pdb
+E:\VS2010\Projects\BMMSI\2010.11.02v1\Komiwojazer1\obj\x86\Debug\Komiwojazer1.exe
+E:\VS2010\Projects\BMMSI\2010.11.02v1\Komiwojazer1\obj\x86\Debug\Komiwojazer1.pdb
+E:\VS2010\Projects\BMMSI\2010.11.02v1\Komiwojazer1\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\VS2010\Projects\BMMSI\2010.11.02v1\Komiwojazer1\obj\x86\Debug\Komiwojazer1.Form1.resources
+E:\VS2010\Projects\BMMSI\2010.11.02v1\Komiwojazer1\obj\x86\Debug\Komiwojazer1.Properties.Resources.resources
+E:\VS2010\Projects\BMMSI\2010.11.02v1\Komiwojazer1\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\VS2010\Projects\BMMSI\2010.11.02v1\Komiwojazer1\obj\x86\Debug\GenerateResource.write.1.tlog
