@@ -24,18 +24,20 @@ namespace Komiwojazer1
         private void btWczytajMiasta_Click(object sender, EventArgs e)
         {
             List<Miasto> miasta = new List<Miasto>();
-            Miasto dodawaneMiasto = new Miasto(0,0);
+            Miasto dodawaneMiasto = new Miasto(0,0,0);
             TextReader tr = new StreamReader("Miasta.txt");
             string miasto;
-            int x, y, a;
+            int x, y, a, index = 0;
             while ((miasto = tr.ReadLine()) != null)
             {
+                index++;
                 cbMiasta.Items.Add(miasto);
                 a = miasto.IndexOf(" ");
-                int.TryParse( miasto.Substring(a+1, 3), out x);
+                int.TryParse(miasto.Substring(a+1, 3), out x);
                 int.TryParse(miasto.Substring(a + 5), out y);
-                dodawaneMiasto.wspolrzedneMiasta.X = x;
-                dodawaneMiasto.wspolrzedneMiasta.Y = y;
+                dodawaneMiasto.WspolrzedneMiasta.X = x;
+                dodawaneMiasto.WspolrzedneMiasta.Y = y;
+                dodawaneMiasto.Index = index;
                 miasta.Add(dodawaneMiasto);
                 Rectangle kropka = new Rectangle(x, y, 2, 2);
                 rysunek.DrawRectangle(rysik, kropka);
@@ -44,5 +46,6 @@ namespace Komiwojazer1
             tr.Close();
 
         }
+
     }
 }
