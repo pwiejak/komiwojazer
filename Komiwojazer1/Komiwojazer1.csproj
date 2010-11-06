@@ -55,6 +55,8 @@
     <Compile Include="Miasta.cs" />
     <Compile Include="Miasto.cs" />
     <Compile Include="Odleglosci.cs" />
+    <Compile Include="Osobnik.cs" />
+    <Compile Include="Populacja.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

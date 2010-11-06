@@ -53,16 +53,30 @@ namespace Komiwojazer1
         private void button1_Click(object sender, EventArgs e)
         {
             Miasta M = new Miasta();
-            for (int i = 0; i < M.ListaMiast.Count; i++)
-            {
-                if (i < M.ListaMiast.Count - 1)
-                    rysunek.DrawLine(Pens.Black, M.ListaMiast[i].WspolrzedneMiasta, M.ListaMiast[i + 1].WspolrzedneMiasta);
-                else
-                    rysunek.DrawLine(Pens.Black, M.ListaMiast[i].WspolrzedneMiasta, M.ListaMiast[0].WspolrzedneMiasta);
-                
-            }
+            this.rysujTrase(M.ListaMiast);
+
+            int rozmiar;
+            rozmiar = int.Parse(RozmiarPopulacji.Value.ToString());
+            Populacja poczatkowaPopulacja = new Populacja(M.ListaMiast);
+            poczatkowaPopulacja.generujLosowa(rozmiar);
+            Populacja nowePokolenie = new Populacja(poczatkowaPopulacja.listaMiast);
+            List<Osobnik> noweOsobniki = nowePokolenie.generujKolejnePokolenie(poczatkowaPopulacja.generowanaPopulacja);
+            //Osobnik przykladowy = new Osobnik(M.ListaMiast);
         }
 
+        
+        public void rysujTrase(List<Miasto> trasa)
+        {
+            for (int i = 0; i < trasa.Count; i++)
+            {
+                if (i < trasa.Count - 1)
+                    rysunek.DrawLine(Pens.Black, trasa[i].WspolrzedneMiasta, trasa[i + 1].WspolrzedneMiasta);
+                else
+                    rysunek.DrawLine(Pens.Black, trasa[i].WspolrzedneMiasta, trasa[0].WspolrzedneMiasta);
+
+            }
+        }
+        
         
 
     }

@@ -9,11 +9,11 @@ namespace Komiwojazer1
     {
         int iloscMiast;
         List<Miasto> listaMiast;
-        double[,] macierzOdleglosci;
+        public int[,] macierzOdleglosci;
 
         public Odleglosci(List<Miasto> miasta)
         {
-            macierzOdleglosci = new double[miasta.Count , miasta.Count];
+            macierzOdleglosci = new int[miasta.Count , miasta.Count];
             iloscMiast = miasta.Count;
             //List<Miasto> listaMiast = new List<Miasto>();
             listaMiast = miasta;
@@ -30,7 +30,7 @@ namespace Komiwojazer1
                                                     (listaMiast[j].WspolrzedneMiasta.X - listaMiast[i].WspolrzedneMiasta.X))
                                                     + ((listaMiast[j].WspolrzedneMiasta.Y - listaMiast[i].WspolrzedneMiasta.Y) * 
                                                     (listaMiast[j].WspolrzedneMiasta.Y - listaMiast[i].WspolrzedneMiasta.Y)) ) );
-                    macierzOdleglosci[i,j] = odleglosc;
+                    macierzOdleglosci[i,j] = (int)odleglosc;
                 }
             }
         }
