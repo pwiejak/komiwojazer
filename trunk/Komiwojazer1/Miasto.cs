@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace Komiwojazer1
 {
-    class Miasto
+    public class Miasto
     {
         public Point WspolrzedneMiasta;
         

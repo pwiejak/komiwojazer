@@ -138,7 +138,7 @@
             this.RozmiarPopulacji.Size = new System.Drawing.Size(120, 20);
             this.RozmiarPopulacji.TabIndex = 14;
             this.RozmiarPopulacji.Value = new decimal(new int[] {
-            10000,
+            10,
             0,
             0,
             0});
