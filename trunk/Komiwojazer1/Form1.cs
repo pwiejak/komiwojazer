@@ -53,23 +53,32 @@ namespace Komiwojazer1
         private void button1_Click(object sender, EventArgs e)
         {
             Miasta M = new Miasta();
-            this.rysujTrase(M.ListaMiast);
+            //this.rysujTrase(M.ListaMiast);
 
             int rozmiar;
+            int iloscIteracji = int.Parse(liczbaPokolen.Value.ToString());
             rozmiar = int.Parse(RozmiarPopulacji.Value.ToString());
             Populacja poczatkowaPopulacja = new Populacja(M.ListaMiast);
             poczatkowaPopulacja.generujLosowa(rozmiar);
             Populacja nowePokolenie = new Populacja(poczatkowaPopulacja.listaMiast);
-            List<Osobnik> noweOsobniki = nowePokolenie.generujKolejnePokolenie(poczatkowaPopulacja.generowanaPopulacja);
+            List<Osobnik> noweOsobniki = new List<Osobnik>();
+            Osobnik min = new Osobnik();
+            min = poczatkowaPopulacja.generowanaPopulacja[0];
+            for (int i = 0; i < iloscIteracji; i++)
+            {
+                aktualnePokolenie.Text = i.ToString();
+                noweOsobniki = nowePokolenie.generujKolejnePokolenie(poczatkowaPopulacja.generowanaPopulacja);
+                for (int j = 0; j < noweOsobniki.Count; j++)
+                {
+                    if (min.dlugoscTrasy > noweOsobniki[j].dlugoscTrasy)
+                        min = noweOsobniki[j];
+                }
+            }
+
+            minimum.Text = min.dlugoscTrasy.ToString();
             
             //wyswietlanie najkrotszej trasy test ! 
-            Osobnik min;
-            min = noweOsobniki[0];
-            for (int i = 0; i < noweOsobniki.Count; i++)
-            {
-                if ( min.dlugoscTrasy < noweOsobniki[i].dlugoscTrasy )
-                    min = noweOsobniki[i];
-            }
+
             rysujTrase(min.odwiedzaneMiasta);
             //Osobnik przykladowy = new Osobnik(M.ListaMiast);
         }
