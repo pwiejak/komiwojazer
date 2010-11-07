@@ -17,8 +17,15 @@ namespace Komiwojazer1
         public List<Osobnik> generujKolejnePokolenie(List<Osobnik> populacja)
         {
             List<Osobnik> kolejnePokolenie = new List<Osobnik>();
+            List<Osobnik> dzieci = new List<Osobnik>();
             List<Osobnik> wybraneOsobniki = wybierzOsobnikowDoKrzyzowania(populacja);
-            kolejnePokolenie = krzyzujOsobniki(wybraneOsobniki[1], wybraneOsobniki[2]);
+            for (int i = 0; i < populacja.Count; i=i+2)
+            {
+                dzieci = krzyzujOsobniki(wybraneOsobniki[i], wybraneOsobniki[i+1]);
+                kolejnePokolenie.Add(dzieci[0]);
+                kolejnePokolenie.Add(dzieci[1]);
+            }
+            
             return kolejnePokolenie;
         }
 

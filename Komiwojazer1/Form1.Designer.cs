@@ -35,11 +35,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textlabel7 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.liczbaPokolen = new System.Windows.Forms.NumericUpDown();
             this.RozmiarPopulacji = new System.Windows.Forms.NumericUpDown();
             this.Mutacje = new System.Windows.Forms.NumericUpDown();
+            this.minimum = new System.Windows.Forms.Label();
+            this.aktualnePokolenie = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.liczbaPokolen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RozmiarPopulacji)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Mutacje)).BeginInit();
             this.SuspendLayout();
@@ -109,19 +111,19 @@
             this.textlabel7.TabIndex = 12;
             this.textlabel7.Text = "Liczba Pokoleń";
             // 
-            // numericUpDown1
+            // liczbaPokolen
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(60, 111);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.liczbaPokolen.Location = new System.Drawing.Point(60, 111);
+            this.liczbaPokolen.Maximum = new decimal(new int[] {
             200000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 13;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            100000,
+            this.liczbaPokolen.Name = "liczbaPokolen";
+            this.liczbaPokolen.Size = new System.Drawing.Size(120, 20);
+            this.liczbaPokolen.TabIndex = 13;
+            this.liczbaPokolen.Value = new decimal(new int[] {
+            100,
             0,
             0,
             0});
@@ -138,7 +140,7 @@
             this.RozmiarPopulacji.Size = new System.Drawing.Size(120, 20);
             this.RozmiarPopulacji.TabIndex = 14;
             this.RozmiarPopulacji.Value = new decimal(new int[] {
-            10,
+            100,
             0,
             0,
             0});
@@ -161,14 +163,34 @@
             0,
             0});
             // 
+            // minimum
+            // 
+            this.minimum.AutoSize = true;
+            this.minimum.Location = new System.Drawing.Point(67, 315);
+            this.minimum.Name = "minimum";
+            this.minimum.Size = new System.Drawing.Size(85, 13);
+            this.minimum.TabIndex = 16;
+            this.minimum.Text = "najkrotsza droga";
+            // 
+            // aktualnePokolenie
+            // 
+            this.aktualnePokolenie.AutoSize = true;
+            this.aktualnePokolenie.Location = new System.Drawing.Point(67, 346);
+            this.aktualnePokolenie.Name = "aktualnePokolenie";
+            this.aktualnePokolenie.Size = new System.Drawing.Size(97, 13);
+            this.aktualnePokolenie.TabIndex = 17;
+            this.aktualnePokolenie.Text = "aktualne pokolenie";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(873, 526);
+            this.Controls.Add(this.aktualnePokolenie);
+            this.Controls.Add(this.minimum);
             this.Controls.Add(this.Mutacje);
             this.Controls.Add(this.RozmiarPopulacji);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.liczbaPokolen);
             this.Controls.Add(this.textlabel7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
@@ -179,7 +201,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.liczbaPokolen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RozmiarPopulacji)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Mutacje)).EndInit();
             this.ResumeLayout(false);
@@ -196,9 +218,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label textlabel7;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown liczbaPokolen;
         private System.Windows.Forms.NumericUpDown RozmiarPopulacji;
         private System.Windows.Forms.NumericUpDown Mutacje;
+        private System.Windows.Forms.Label minimum;
+        private System.Windows.Forms.Label aktualnePokolenie;
     }
 }
 
