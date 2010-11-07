@@ -18,7 +18,7 @@ namespace Komiwojazer1
         {
             List<Osobnik> kolejnePokolenie = new List<Osobnik>();
             List<Osobnik> wybraneOsobniki = wybierzOsobnikowDoKrzyzowania(populacja);
-            krzyzujOsobniki(wybraneOsobniki[1], wybraneOsobniki[2]);
+            kolejnePokolenie = krzyzujOsobniki(wybraneOsobniki[1], wybraneOsobniki[2]);
             return kolejnePokolenie;
         }
 
@@ -38,46 +38,94 @@ namespace Komiwojazer1
 
         public List<Osobnik> krzyzujOsobniki(Osobnik rodzicA, Osobnik rodzicB)
         {
-            List<Osobnik> dzieci = new List<Osobnik>();
-            Osobnik rodzic1 = new Osobnik();
-            rodzic1 = rodzicA;
-            Osobnik rodzic2 = new Osobnik();
-            rodzic2 = rodzicB;
-            Osobnik dziecko1 = new Osobnik();
-            dziecko1 = rodzic1;
-            Osobnik dziecko2 = new Osobnik();
-            dziecko2 = rodzic2;
-            int przedzial1, przedzial2;
-            przedzial1 = rodzic1.listaMiast.Count / 3;
-            przedzial2 = przedzial1 * 2;
-            for (int i = przedzial1; i < przedzial2; i++)
+            System.Random x = new Random();
+            int przedzialA = losujLiczbe(rodzicA.listaMiast.Count,x);
+            int przedzialB = losujLiczbe(rodzicA.listaMiast.Count, x);
+            while (przedzialA.Equals(przedzialB))
             {
-                dziecko1.odwiedzaneMiasta[i] = rodzic2.odwiedzaneMiasta[i];
-                dziecko2.odwiedzaneMiasta[i] = rodzic1.odwiedzaneMiasta[i];
+                przedzialA = losujLiczbe(rodzicA.listaMiast.Count, x);
+            }
+            if (przedzialA > przedzialB)
+            { 
+                int temp = przedzialB;
+                przedzialB = przedzialA;
+                przedzialA = temp;
             }
 
+            List<Miasto> listaMiastOdwiedzonych1 = new List<Miasto>();
+            List<Miasto> listaMiast1 = new List<Miasto>();
+            for (int i = 0 ; i < rodzicA.odwiedzaneMiasta.Count ; i++)
+            {
+                Miasto mLista = rodzicA.listaMiast[i];
+                Miasto mOdwiedzone = rodzicA.odwiedzaneMiasta[i];
+                listaMiast1.Add(mLista);
+                listaMiastOdwiedzonych1.Add(mOdwiedzone);
+            }
+
+            List<Miasto> listaMiastOdwiedzonych2 = new List<Miasto>();
+            List<Miasto> listaMiast2 = new List<Miasto>();
+            for (int i = 0; i < rodzicB.odwiedzaneMiasta.Count; i++)
+            {
+                Miasto mLista = rodzicB.listaMiast[i];
+                Miasto mOdwiedzone = rodzicB.odwiedzaneMiasta[i];
+                listaMiast2.Add(mLista);
+                listaMiastOdwiedzonych2.Add(mOdwiedzone);
+            }
+            
+            List<Osobnik> dzieci = new List<Osobnik>();
+
+            
+
+            Osobnik rodzic1 = new Osobnik();
+            rodzic1.odwiedzaneMiasta = listaMiastOdwiedzonych1;
+            rodzic1.listaMiast = listaMiast1;
+
+            Osobnik rodzic2 = new Osobnik();
+            rodzic2.odwiedzaneMiasta = listaMiastOdwiedzonych2;
+            rodzic2.listaMiast = listaMiast2;
+           
+            Osobnik dziecko1 = rodzic1;
+            Osobnik dziecko2 = rodzic2;
+            
+
+            for (int i = 0; i < dziecko1.listaMiast.Count; i++)
+            {
+                dziecko1.odwiedzaneMiasta[i] = null;
+            }
+            for (int i = 0; i < dziecko2.listaMiast.Count; i++)
+            {
+                dziecko2.odwiedzaneMiasta[i] = null;
+            }
+            for (int i = przedzialA; i < przedzialB; i++)
+            {
+                dziecko1.odwiedzaneMiasta[i] = rodzicB.odwiedzaneMiasta[i];
+                dziecko2.odwiedzaneMiasta[i] = rodzicA.odwiedzaneMiasta[i];
+            }
+            int przedzial = przedzialB;
             for (int j = 0; j < listaMiast.Count; j++)
             {
-                if (dziecko1.odwiedzaneMiasta[j] != null)
-                {
-                    for (int k = 0; k < listaMiast.Count; k++)
+                if (dziecko1.odwiedzaneMiasta[j] == null)
+                { 
+                    while(dziecko1.odwiedzaneMiasta.Contains(rodzicA.odwiedzaneMiasta[przedzialB]))
                     {
-                        if (!(dziecko1.odwiedzaneMiasta.Contains(rodzic1.odwiedzaneMiasta[k])))
-                        {
-                            dziecko1.odwiedzaneMiasta[k] = rodzic1.listaMiast[k];
-                        }
+                        if(przedzialB < rodzicA.odwiedzaneMiasta.Count - 1)
+                            przedzialB++;
+                        else
+                            przedzialB = 0;
                     }
+                    dziecko1.odwiedzaneMiasta[j] = rodzicA.odwiedzaneMiasta[przedzialB];
                 }
 
-                if (dziecko2.odwiedzaneMiasta[j] != null)
+                if (dziecko2.odwiedzaneMiasta[j] == null)
                 {
-                    for (int k = 0; k < listaMiast.Count; k++)
+                    while (dziecko2.odwiedzaneMiasta.Contains(rodzicB.odwiedzaneMiasta[przedzial]))
                     {
-                        if (!(dziecko2.odwiedzaneMiasta.Contains(rodzic2.odwiedzaneMiasta[k])))
-                        {
-                            dziecko1.odwiedzaneMiasta[k] =  rodzic1.odwiedzaneMiasta[k];
-                        }
+                        if (przedzial < rodzicB.odwiedzaneMiasta.Count - 1)
+                            przedzial++;
+                        else
+                            przedzial = 0;
                     }
+                    dziecko2.odwiedzaneMiasta[j] = rodzicB.odwiedzaneMiasta[przedzial];
                 }
             }
             dziecko1.liczTrase(dziecko1.odwiedzaneMiasta);

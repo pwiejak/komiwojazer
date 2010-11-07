@@ -61,12 +61,24 @@ namespace Komiwojazer1
             poczatkowaPopulacja.generujLosowa(rozmiar);
             Populacja nowePokolenie = new Populacja(poczatkowaPopulacja.listaMiast);
             List<Osobnik> noweOsobniki = nowePokolenie.generujKolejnePokolenie(poczatkowaPopulacja.generowanaPopulacja);
+            
+            //wyswietlanie najkrotszej trasy test ! 
+            Osobnik min;
+            min = noweOsobniki[0];
+            for (int i = 0; i < noweOsobniki.Count; i++)
+            {
+                if ( min.dlugoscTrasy < noweOsobniki[i].dlugoscTrasy )
+                    min = noweOsobniki[i];
+            }
+            rysujTrase(min.odwiedzaneMiasta);
             //Osobnik przykladowy = new Osobnik(M.ListaMiast);
         }
 
-        
+
         public void rysujTrase(List<Miasto> trasa)
         {
+
+            rysunek.Clear(Color.GhostWhite);
             for (int i = 0; i < trasa.Count; i++)
             {
                 if (i < trasa.Count - 1)
