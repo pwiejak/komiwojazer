@@ -1,12 +1,3 @@
-aagd 90 300
-Miasto2 321 44
-Miasto3 400 100
-Miasto4 100 200
-Miasto5 1 1
-Miasto6 200 200
-Miasto7 300 400
-Miasto8 50  400
-aaa 43 470
 ffs 342 432
 aa 32 135
 gg 430 212
@@ -20,11 +11,3 @@ ghi 76 400
 jkl 400 350
 mno 356 190
 pqr 431 203
-stu 329 409
-wxy 432 156
-z 280 130
-elo 30 130
-bbb 50 250
-ccc 150 90
-ddd 165 200
-eee 200 321

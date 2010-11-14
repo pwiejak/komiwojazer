@@ -66,7 +66,6 @@ namespace Komiwojazer1
             min = poczatkowaPopulacja.generowanaPopulacja[0];
             for (int i = 0; i < iloscIteracji; i++)
             {
-                aktualnePokolenie.Text = i.ToString();
                 noweOsobniki = nowePokolenie.generujKolejnePokolenie(poczatkowaPopulacja.generowanaPopulacja);
                 for (int j = 0; j < noweOsobniki.Count; j++)
                 {
@@ -76,7 +75,6 @@ namespace Komiwojazer1
             }
 
             minimum.Text = min.dlugoscTrasy.ToString();
-            
             //wyswietlanie najkrotszej trasy test ! 
 
             rysujTrase(min.odwiedzaneMiasta);
@@ -97,7 +95,8 @@ namespace Komiwojazer1
 
             }
         }
-        
+
+    
         
 
     }

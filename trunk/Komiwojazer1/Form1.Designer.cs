@@ -40,6 +40,8 @@
             this.Mutacje = new System.Windows.Forms.NumericUpDown();
             this.minimum = new System.Windows.Forms.Label();
             this.aktualnePokolenie = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.liczbaPokolen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RozmiarPopulacji)).BeginInit();
@@ -73,6 +75,7 @@
             this.cbMiasta.Name = "cbMiasta";
             this.cbMiasta.Size = new System.Drawing.Size(121, 21);
             this.cbMiasta.TabIndex = 3;
+            this.cbMiasta.Visible = false;
             // 
             // label1
             // 
@@ -91,6 +94,7 @@
             this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Mutacje [%]";
+            this.label2.Visible = false;
             // 
             // button1
             // 
@@ -162,11 +166,12 @@
             0,
             0,
             0});
+            this.Mutacje.Visible = false;
             // 
             // minimum
             // 
             this.minimum.AutoSize = true;
-            this.minimum.Location = new System.Drawing.Point(67, 315);
+            this.minimum.Location = new System.Drawing.Point(106, 317);
             this.minimum.Name = "minimum";
             this.minimum.Size = new System.Drawing.Size(85, 13);
             this.minimum.TabIndex = 16;
@@ -175,17 +180,39 @@
             // aktualnePokolenie
             // 
             this.aktualnePokolenie.AutoSize = true;
-            this.aktualnePokolenie.Location = new System.Drawing.Point(67, 346);
+            this.aktualnePokolenie.Location = new System.Drawing.Point(106, 344);
             this.aktualnePokolenie.Name = "aktualnePokolenie";
             this.aktualnePokolenie.Size = new System.Drawing.Size(97, 13);
             this.aktualnePokolenie.TabIndex = 17;
             this.aktualnePokolenie.Text = "aktualne pokolenie";
+            this.aktualnePokolenie.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 317);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 13);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Najkrótsza droga:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 344);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 13);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Minimalna droga";
+            this.label4.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(873, 526);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.aktualnePokolenie);
             this.Controls.Add(this.minimum);
             this.Controls.Add(this.Mutacje);
@@ -223,6 +250,8 @@
         private System.Windows.Forms.NumericUpDown Mutacje;
         private System.Windows.Forms.Label minimum;
         private System.Windows.Forms.Label aktualnePokolenie;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
