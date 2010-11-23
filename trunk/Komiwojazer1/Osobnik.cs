@@ -7,8 +7,8 @@ namespace Komiwojazer1
 {
     class Osobnik
     {
-        public List<Miasto> odwiedzaneMiasta;// = new List<Miasto>();
-        public List<Miasto> listaMiast;
+        public List<Miasto> odwiedzaneMiasta; 
+        public List<Miasto> listaMiast;   
         public int dlugoscTrasy;
 
         public Osobnik(List<Miasto> miasta)
@@ -25,45 +25,20 @@ namespace Komiwojazer1
         {
             List<int> numeryMiast = new List<int>();
             List<Miasto> pomocniczaLista = new List<Miasto>(listaMiast);
-            //pomocniczaLista = listaMiast;
             odwiedzaneMiasta = new List<Miasto>();
-            //losowanie miast do przebycia
-            //bool ok = false;
             int temp;
-           // Random seed = new Random();
+
             for (int i = 0; i < listaMiast.Count; i++)
             {
-
-                //ok = false;
-                //while (!ok)
-                
                     temp = losujLiczbe(pomocniczaLista.Count, generator);
-                    /*if (numeryMiast.Contains(temp) == true)
-                    {
-                        ok = false;
-                    }
-                    else
-                    {
-                        numeryMiast.Add(temp);
-                        odwiedzaneMiasta.Add(listaMiast[temp]);
-                        ok = true;
-                    }*/
                     odwiedzaneMiasta.Add(pomocniczaLista[temp]);
                     pomocniczaLista.Remove(pomocniczaLista[temp]);
-                
-
             }
 
             liczTrase(odwiedzaneMiasta);
-            /*Odleglosci odleglosci = new Odleglosci(odwiedzaneMiasta);
-            odleglosci.ObliczOdleglosci();
-            for (int j = 0; j < listaMiast.Count - 1; j++)
-            {
-                dlugoscTrasy = dlugoscTrasy + odleglosci.macierzOdleglosci[j, j + 1];
-            }*/
         }
 
-        public void liczTrase(List<Miasto> miasta)
+        public void liczTrase(List<Miasto> miasta)  //funkcja wyliczajaca dlugosc trasy
         {
             Odleglosci odleglosci = new Odleglosci(odwiedzaneMiasta);
             dlugoscTrasy = 0;
@@ -74,7 +49,7 @@ namespace Komiwojazer1
             }
         }
 
-        public int losujLiczbe(int max, Random generator)
+        public int losujLiczbe(int max, Random generator) //generator liczb losowych
         {
             return generator.Next(0, max);
         }

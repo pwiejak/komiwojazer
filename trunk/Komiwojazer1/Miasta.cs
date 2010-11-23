@@ -12,16 +12,16 @@ namespace Komiwojazer1
 {
     class Miasta
     {
-        public List<Miasto> ListaMiast = new List<Miasto>();
+        public List<Miasto> ListaMiast = new List<Miasto>(); //lista miast
         
-        public Miasta()
+        public Miasta()                                      //konstruktor Miasta
         {
             ListaMiast = new List<Miasto>();
             
             TextReader tr = new StreamReader("Miasta.txt");
             string miasto;
             int x, y, a, index = 0;
-            while ((miasto = tr.ReadLine()) != null)
+            while ((miasto = tr.ReadLine()) != null)        //odczytywanie miast z pliku
             {
                 Miasto dodawaneMiasto = new Miasto(0, 0, 0);
                 index++;

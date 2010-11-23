@@ -19,7 +19,7 @@ namespace Komiwojazer1
             listaMiast = miasta;
         }
 
-        public void ObliczOdleglosci()
+        public void ObliczOdleglosci()  //wyliczanie odleglosci trasy
         {
             double odleglosc;
             for (int i = 0; i < iloscMiast; i++)
