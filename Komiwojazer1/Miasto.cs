@@ -8,12 +8,12 @@ namespace Komiwojazer1
 {
     public class Miasto
     {
-        public Point WspolrzedneMiasta;
-        
-        public int Index;
+        public Point WspolrzedneMiasta; //wspolrzedne miasta
+         
+        public int Index;               //indeks miasta
         
 
-        public Miasto(int x, int y, int i)
+        public Miasto(int x, int y, int i) //konsturktor miasta
         {
             WspolrzedneMiasta = new Point(x, y);
             Index = i;

@@ -12,6 +12,8 @@ namespace Komiwojazer1
 {
     public partial class Form1 : Form
     {
+
+
         Graphics rysunek;
         Pen rysik = new Pen(Color.Black, 2);
 
@@ -52,6 +54,14 @@ namespace Komiwojazer1
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            DateTime startTime = DateTime.Now;
+
+           
+
+           
+
+
             Miasta M = new Miasta();
             //this.rysujTrase(M.ListaMiast);
 
@@ -79,6 +89,11 @@ namespace Komiwojazer1
 
             rysujTrase(min.odwiedzaneMiasta);
             //Osobnik przykladowy = new Osobnik(M.ListaMiast);
+
+
+            DateTime stopTime = DateTime.Now;
+            TimeSpan roznica = stopTime - startTime;
+            Czas.Text = roznica.ToString();
         }
 
 
@@ -96,8 +111,6 @@ namespace Komiwojazer1
             }
         }
 
-    
-        
 
     }
 }

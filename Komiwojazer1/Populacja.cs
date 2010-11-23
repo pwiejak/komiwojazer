@@ -43,25 +43,25 @@ namespace Komiwojazer1
             return generowanaPopulacja;
         }
 
-        public List<Osobnik> krzyzujOsobniki(Osobnik rodzicA, Osobnik rodzicB)
+        public List<Osobnik> krzyzujOsobniki(Osobnik rodzicA, Osobnik rodzicB) //krzyzowanie OX
         {
             System.Random x = new Random();
-            int przedzialA = losujLiczbe(rodzicA.listaMiast.Count,x);
+            int przedzialA = losujLiczbe(rodzicA.listaMiast.Count,x);   //losowanie przedzialu do krzyzowania polaczen
             int przedzialB = losujLiczbe(rodzicA.listaMiast.Count, x);
-            while (przedzialA.Equals(przedzialB))
+            while (przedzialA.Equals(przedzialB))                       //gdy przedzialy sa rowne szuka innej granicy przedzialu
             {
                 przedzialA = losujLiczbe(rodzicA.listaMiast.Count, x);
             }
-            if (przedzialA > przedzialB)
+            if (przedzialA > przedzialB)                                //pierwsza granica musi byc mniejsza
             { 
                 int temp = przedzialB;
                 przedzialB = przedzialA;
                 przedzialA = temp;
             }
 
-            List<Miasto> listaMiastOdwiedzonych1 = new List<Miasto>();
+            List<Miasto> listaMiastOdwiedzonych1 = new List<Miasto>();  //tworzenie nowych miast i kopiowanie wartosci od rodzicow
             List<Miasto> listaMiast1 = new List<Miasto>();
-            for (int i = 0 ; i < rodzicA.odwiedzaneMiasta.Count ; i++)
+            for (int i = 0 ; i < rodzicA.odwiedzaneMiasta.Count ; i++)  
             {
                 Miasto mLista = rodzicA.listaMiast[i];
                 Miasto mOdwiedzone = rodzicA.odwiedzaneMiasta[i];
@@ -81,7 +81,6 @@ namespace Komiwojazer1
             
             List<Osobnik> dzieci = new List<Osobnik>();
 
-            
 
             Osobnik rodzic1 = new Osobnik();
             rodzic1.odwiedzaneMiasta = listaMiastOdwiedzonych1;
@@ -103,13 +102,13 @@ namespace Komiwojazer1
             {
                 dziecko2.odwiedzaneMiasta[i] = null;
             }
-            for (int i = przedzialA; i < przedzialB; i++)
+            for (int i = przedzialA; i < przedzialB; i++)  // krzyzowanie
             {
                 dziecko1.odwiedzaneMiasta[i] = rodzicB.odwiedzaneMiasta[i];
                 dziecko2.odwiedzaneMiasta[i] = rodzicA.odwiedzaneMiasta[i];
             }
             int przedzial = przedzialB;
-            for (int j = 0; j < listaMiast.Count; j++)
+            for (int j = 0; j < listaMiast.Count; j++)    //uzupelnianie trasy wedlug krzyzowania OX
             {
                 if (dziecko1.odwiedzaneMiasta[j] == null)
                 { 

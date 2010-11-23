@@ -42,6 +42,8 @@
             this.aktualnePokolenie = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Czas = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.liczbaPokolen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RozmiarPopulacji)).BeginInit();
@@ -180,7 +182,7 @@
             // aktualnePokolenie
             // 
             this.aktualnePokolenie.AutoSize = true;
-            this.aktualnePokolenie.Location = new System.Drawing.Point(106, 344);
+            this.aktualnePokolenie.Location = new System.Drawing.Point(106, 376);
             this.aktualnePokolenie.Name = "aktualnePokolenie";
             this.aktualnePokolenie.Size = new System.Drawing.Size(97, 13);
             this.aktualnePokolenie.TabIndex = 17;
@@ -199,18 +201,37 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 344);
+            this.label4.Location = new System.Drawing.Point(12, 376);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 13);
             this.label4.TabIndex = 19;
             this.label4.Text = "Minimalna droga";
             this.label4.Visible = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(66, 349);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 13);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Czas :";
+            // 
+            // Czas
+            // 
+            this.Czas.Location = new System.Drawing.Point(108, 346);
+            this.Czas.Name = "Czas";
+            this.Czas.ReadOnly = true;
+            this.Czas.Size = new System.Drawing.Size(100, 20);
+            this.Czas.TabIndex = 21;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(873, 526);
+            this.Controls.Add(this.Czas);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.aktualnePokolenie);
@@ -252,6 +273,8 @@
         private System.Windows.Forms.Label aktualnePokolenie;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox Czas;
     }
 }
 
