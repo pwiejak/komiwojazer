@@ -3,7 +3,7 @@ aa 32 135
 gg 430 212
 inne 231 189
 kolejne 44 300
-bla 456 80
+faf 456 80
 abc 200 100
 bcd 213 311
 def 90 123
